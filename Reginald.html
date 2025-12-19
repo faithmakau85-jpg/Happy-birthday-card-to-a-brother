@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Card for Reginald 🎉</title>
+
+<style>
+body {
+    background-image: url("https://images.unsplash.com/photo-1513151233558-d860c5398176");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+/* CARD STYLE */
+.card {
+    background: #ffffff;
+    width: 360px;
+    height: 520px;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+/* TOP TEXT */
+.card h1 {
+    color: #ff6f00;
+    margin-bottom: 5px;
+}
+
+.card h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* AGE */
+.age {
+    font-size: 100px;
+    font-weight: bold;
+    color: #ff9800;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+/* HIDDEN CONTENT */
+.sing, .message {
+    display: none;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.sing {
+    color: #e65100;
+}
+
+.message {
+    color: #444;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    font-size: 14px;
+    color: #999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <h2>Reginald Muathe</h2>
+
+    <p>Tap the age to open your card 💌</p>
+
+    <!-- BIG 22 -->
+    <div class="age" id="age">22</div>
+
+    <!-- SONG TEXT -->
+    <div class="sing" id="singSong">
+        🎶 Happy Birthday to you 🎶<br>
+        🎶 Happy Birthday to you 🎶<br>
+        🎶 Happy Birthday dear Reginald 🎶<br>
+        🎶 Happy Birthday to you 🎶
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="message" id="message">
+        🎊 Wishing you joy, success, and laughter as you step into
+        this beautiful new year of your life.  
+        May 22 bring you endless smiles and unforgettable moments ✨
+    </div>
+
+    <div class="footer">
+        💙 From someone who wishes you the best 💙
+    </div>
+</div>
+
+<script>
+const age = document.getElementById("age");
+const singSong = document.getElementById("singSong");
+const message = document.getElementById("message");
+
+age.onclick = function() {
+    singSong.style.display = "block";
+    message.style.display = "block";
+};
+</script>
+
+</body>
+</html>
+
