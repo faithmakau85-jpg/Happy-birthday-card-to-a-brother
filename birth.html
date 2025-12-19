@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Reginald Muathe 🎉</title>
+
+<style>
+body {
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #ff4081;
+}
+
+.cake {
+    margin: 20px auto;
+    width: 200px;
+    cursor: pointer;
+}
+
+.message {
+    display: none;
+    color: #ff4081;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+button {
+    background: #ff4081;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #e91e63;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <h2>Reginald Muathe 🎂</h2>
+
+    <p>Make a wish and click the candles to blow them out 💨</p>
+
+    <!-- Cake Image -->
+    <img src="https://i.imgur.com/7yUvePI.png" class="cake" id="cake">
+
+    <div class="message" id="birthdayMessage">
+        🎊 Happy Birthday Reginald! 🎊<br>
+        May your day be filled with love, laughter, and beautiful surprises.
+        You deserve all the happiness today and always 💖✨
+    </div>
+
+    <br>
+    <button onclick="playSong()">🎶 Play Birthday Song</button>
+
+    <!-- Birthday Song -->
+    <audio id="song">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+const cake = document.getElementById("cake");
+const message = document.getElementById("birthdayMessage");
+
+cake.onclick = function() {
+    cake.style.opacity = "0.3";
+    message.style.display = "block";
+};
+
+function playSong() {
+    document.getElementById("song").play();
+}
+</script>
+
+</body>
+</html>
